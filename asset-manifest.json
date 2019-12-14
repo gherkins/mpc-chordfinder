@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/mpc-chordfinder/static/css/main.7de3cbb7.chunk.css",
-    "main.js": "/mpc-chordfinder/static/js/main.e239d40c.chunk.js",
-    "main.js.map": "/mpc-chordfinder/static/js/main.e239d40c.chunk.js.map",
+    "main.js": "/mpc-chordfinder/static/js/main.fd27fea3.chunk.js",
+    "main.js.map": "/mpc-chordfinder/static/js/main.fd27fea3.chunk.js.map",
     "runtime-main.js": "/mpc-chordfinder/static/js/runtime-main.d26248c4.js",
     "runtime-main.js.map": "/mpc-chordfinder/static/js/runtime-main.d26248c4.js.map",
     "static/js/2.7c3dcfa8.chunk.js": "/mpc-chordfinder/static/js/2.7c3dcfa8.chunk.js",
     "static/js/2.7c3dcfa8.chunk.js.map": "/mpc-chordfinder/static/js/2.7c3dcfa8.chunk.js.map",
     "index.html": "/mpc-chordfinder/index.html",
-    "precache-manifest.2a11a194fc8144b7563cadbd590d5e1e.js": "/mpc-chordfinder/precache-manifest.2a11a194fc8144b7563cadbd590d5e1e.js",
+    "precache-manifest.47c0b001ba8c4d225cfea5bad3b69618.js": "/mpc-chordfinder/precache-manifest.47c0b001ba8c4d225cfea5bad3b69618.js",
     "service-worker.js": "/mpc-chordfinder/service-worker.js",
     "static/css/main.7de3cbb7.chunk.css.map": "/mpc-chordfinder/static/css/main.7de3cbb7.chunk.css.map",
     "static/js/2.7c3dcfa8.chunk.js.LICENSE": "/mpc-chordfinder/static/js/2.7c3dcfa8.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.d26248c4.js",
     "static/js/2.7c3dcfa8.chunk.js",
     "static/css/main.7de3cbb7.chunk.css",
-    "static/js/main.e239d40c.chunk.js"
+    "static/js/main.fd27fea3.chunk.js"
   ]
 }

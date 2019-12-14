@@ -109,7 +109,7 @@ class Pads extends React.Component {
     ];
 
     return (
-      <div className={'pads pads-' + numberOfPads + ' row'}>
+      <div className={'row pads pads-' + numberOfPads}>
         {Array.from(sortedPads, (pad, index) =>
           <div className={'col col-3 pad-container'} key={index}>
             <div className="embed-responsive embed-responsive-1by1 text-center">
@@ -156,12 +156,6 @@ class App extends React.Component {
     const numberOfPads = this.state.numberOfPads;
     return (
       <div className="App">
-        <div className="row">
-          <div className="col col-12">
-            <h2>MPC-Chord-Finder 2</h2>
-          </div>
-        </div>
-
         <div className="row">
           <div className="col col-12">
             <PadSelect changeNumberOfPads={this.changeNumberOfPads} />

@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+html {
+    min-height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background: linear-gradient(-45deg, #2144fb 0%, #3862fd 50%, #4f81ff 100%);
+    min-height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.col {
+    padding: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h2 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 0;
 }
 
-.App-link {
-  color: #61dafb;
+select {
+    margin-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+select:first-child {
+    margin-top: 0;
+}
+
+.pads-12 .pad-container:nth-child(4n) {
+    opacity: 0.2;
+}
+
+.pads .pad {
+    background: #666;
+    box-shadow: inset 0 0 1.5em rgba(0, 0, 0, .35);
+}
+
+
+.pads .pad.active {
+    background: #fff;
+}
+
+.pad {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.pad:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+.pad-name {
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
 }

@@ -35,7 +35,6 @@ select:first-child {
     box-shadow: inset 0 0 1.5em rgba(0, 0, 0, .35);
 }
 
-
 .pads .pad.active {
     background: #fff;
 }
@@ -50,11 +49,11 @@ select:first-child {
     display: inline-block;
     height: 100%;
     vertical-align: middle;
-    margin-right: -0.25em; /* Adjusts for spacing */
+    margin-right: -0.25em;
 }
 
 .pad-name {
     display: inline-block;
     vertical-align: middle;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }

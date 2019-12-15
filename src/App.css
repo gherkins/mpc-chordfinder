@@ -7,6 +7,15 @@ body {
     min-height: 100%;
 }
 
+.container {
+    max-width: 400px;
+}
+
+footer {
+    margin-top: 30px;
+    background: #666;
+}
+
 .col {
     padding: 5px;
 }

@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/mpc-chordfinder/static/css/main.b27c62c9.chunk.css",
-    "main.js": "/mpc-chordfinder/static/js/main.fd27fea3.chunk.js",
-    "main.js.map": "/mpc-chordfinder/static/js/main.fd27fea3.chunk.js.map",
+    "main.css": "/mpc-chordfinder/static/css/main.cf063867.chunk.css",
+    "main.js": "/mpc-chordfinder/static/js/main.ab405bab.chunk.js",
+    "main.js.map": "/mpc-chordfinder/static/js/main.ab405bab.chunk.js.map",
     "runtime-main.js": "/mpc-chordfinder/static/js/runtime-main.d26248c4.js",
     "runtime-main.js.map": "/mpc-chordfinder/static/js/runtime-main.d26248c4.js.map",
-    "static/js/2.7c3dcfa8.chunk.js": "/mpc-chordfinder/static/js/2.7c3dcfa8.chunk.js",
-    "static/js/2.7c3dcfa8.chunk.js.map": "/mpc-chordfinder/static/js/2.7c3dcfa8.chunk.js.map",
+    "static/js/2.6f35bf50.chunk.js": "/mpc-chordfinder/static/js/2.6f35bf50.chunk.js",
+    "static/js/2.6f35bf50.chunk.js.map": "/mpc-chordfinder/static/js/2.6f35bf50.chunk.js.map",
     "index.html": "/mpc-chordfinder/index.html",
-    "precache-manifest.fe167bfe0810a54766556281a3cbce18.js": "/mpc-chordfinder/precache-manifest.fe167bfe0810a54766556281a3cbce18.js",
+    "precache-manifest.33debb8fa793a490201db3d2dd90fe50.js": "/mpc-chordfinder/precache-manifest.33debb8fa793a490201db3d2dd90fe50.js",
     "service-worker.js": "/mpc-chordfinder/service-worker.js",
-    "static/css/main.b27c62c9.chunk.css.map": "/mpc-chordfinder/static/css/main.b27c62c9.chunk.css.map",
-    "static/js/2.7c3dcfa8.chunk.js.LICENSE": "/mpc-chordfinder/static/js/2.7c3dcfa8.chunk.js.LICENSE"
+    "static/css/main.cf063867.chunk.css.map": "/mpc-chordfinder/static/css/main.cf063867.chunk.css.map",
+    "static/js/2.6f35bf50.chunk.js.LICENSE": "/mpc-chordfinder/static/js/2.6f35bf50.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.d26248c4.js",
-    "static/js/2.7c3dcfa8.chunk.js",
-    "static/css/main.b27c62c9.chunk.css",
-    "static/js/main.fd27fea3.chunk.js"
+    "static/js/2.6f35bf50.chunk.js",
+    "static/css/main.cf063867.chunk.css",
+    "static/js/main.ab405bab.chunk.js"
   ]
 }

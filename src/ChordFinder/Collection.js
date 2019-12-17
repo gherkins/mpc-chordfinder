@@ -1,13 +1,11 @@
 import React from 'react';
 import { Redirect, Link } from 'react-router-dom';
 import teoria from 'teoria';
+import Clipboard from 'react-clipboard.js';
 
 import Pads from './Pads';
 
 export default class Collection extends React.Component {
-
-  handleFocus = (event) => event.target.select();
-
   render() {
     let chords = [];
     try {
@@ -28,15 +26,15 @@ export default class Collection extends React.Component {
             <h2>MPC-Chords</h2>
             <Link to={'/'}>
               <button className="btn btn-block text-left back">
-                To the Chord-Finder-App
+                Back to the Chord-Finder-App
               </button>
             </Link>
-            <input
-              type="text"
-              className="form-control"
-              onClick={this.handleFocus}
-              readOnly={true}
-              value={window.location.href} />
+            <Clipboard
+              data-clipboard-text={window.location.href}
+              className="btn btn-block text-left"
+              component="button">
+              Copy collection-URL to clipboard
+            </Clipboard>
           </div>
         </div>
         {Array.from(chords, (chord, index) =>

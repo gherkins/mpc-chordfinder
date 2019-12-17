@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, BrowserRouter, Link, generatePath } from 'react-router-dom';
+import { Route, Switch, HashRouter } from 'react-router-dom';
 
 import teoria from 'teoria';
 
@@ -54,7 +54,7 @@ class App extends React.Component {
     const numberOfPads = this.state.numberOfPads;
     const collection = this.state.collection;
     return (
-      <BrowserRouter>
+      <HashRouter basename='/'>
         <Switch>
           <Route path={'/collection/:chords'} exact component={Collection} />
           <Route path={'/'} exact>
@@ -84,7 +84,7 @@ class App extends React.Component {
             </div>
           </Route>
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }

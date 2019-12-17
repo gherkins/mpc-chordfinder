@@ -16,14 +16,11 @@ a:hover {
     text-decoration: none;
 }
 
-a:not([href]) {
-    opacity: 0.65;
-}
-
-.btn {
+.btn-block {
     color: #495057 !important;
     background: #fff;
     text-decoration: none;
+    margin-bottom: 10px;
 }
 
 .container {

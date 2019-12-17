@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default class CollectionActions extends React.Component {
   render() {
@@ -6,20 +7,19 @@ export default class CollectionActions extends React.Component {
       <div className="row">
         <div className="col col-12">
           <button
-            className="btn btn-white btn-block text-left"
+            className="btn btn-block text-left"
             onClick={this.props.addChordToCollection}>
             Add chord to collection
           </button>
-          <a
-            role="button"
-            target="_blank"
-            rel="noopener noreferrer"
-            href={0 === this.props.collection.length ? undefined : '/collection/' + this.props.collection.join('-')}
-            className='btn btn-white btn-block text-left'>
-            Show chord-collection ({this.props.collection.length})
-          </a>
+          <Link to={'/collection/' + this.props.collection.join('-')} target="_blank">
+            <button
+              className='btn btn-block text-left'
+              disabled={0 === this.props.collection.length}>
+              Show chord-collection ({this.props.collection.length})
+            </button>
+          </Link>
           <button
-            className="btn btn-white btn-block text-left"
+            className="btn btn-block text-left"
             disabled={0 === this.props.collection.length}
             onClick={this.props.clearChordCollection}>
             Clear chord-collection

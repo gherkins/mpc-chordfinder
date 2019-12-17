@@ -12,16 +12,14 @@ export default class Collection extends React.Component {
       let chord = teoria.chord(chordName);
       chords.push(chord);
     });
-
-    console.log(chords);
-
-
     return (
       <div>
         {Array.from(chords, (chord, index) =>
-          <div>
-            <h3>{chord.name}</h3>
-            <Pads key={index} currentChord={chord}></Pads>
+          <div className="list-group">
+            <div className="list-group-item">
+              <h3>{chord.name}</h3>
+              <Pads key={index} currentChord={chord}></Pads>
+            </div>
           </div>,
         )}
       </div>

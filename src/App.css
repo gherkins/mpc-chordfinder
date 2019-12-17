@@ -16,6 +16,16 @@ a:hover {
     text-decoration: none;
 }
 
+a:not([href]) {
+    opacity: 0.5;
+}
+
+.btn {
+    color: #495057 !important;
+    background: #fff;
+    text-decoration: none;
+}
+
 .container {
     max-width: 400px;
 }

@@ -1,26 +1,29 @@
 import React from 'react';
+import teoria from 'teoria';
+
+import Pads from './Pads';
 
 export default class Collection extends React.Component {
+
   render() {
-    let chordNames = [];
-    this.props.collection.forEach(function (chord) {
-      chordNames.push(chord.name);
+    let chordsNames = window.location.href.split('/').pop().split('-');
+    let chords = [];
+    chordsNames.forEach(function (chordName) {
+      let chord = teoria.chord(chordName);
+      chords.push(chord);
     });
+
+    console.log(chords);
+
+
     return (
-      <div className="row">
-        <div className="col col-12">
-          <button
-            className="btn btn-white btn-block text-left"
-            onClick={this.props.addChordToCollection}>
-            Add chord to collection
-          </button>
-          <button
-            className='btn btn-white btn-block text-left'
-            disabled={0 === this.props.collection.length}
-            onClick={this.props.showChordCollection}>
-            Show chord-collection ({this.props.collection.length})
-          </button>
-        </div>
+      <div>
+        {Array.from(chords, (chord, index) =>
+          <div>
+            <h3>{chord.name}</h3>
+            <Pads key={index} currentChord={chord}></Pads>
+          </div>,
+        )}
       </div>
     );
   }

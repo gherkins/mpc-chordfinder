@@ -1,10 +1,15 @@
 import React from 'react';
+import { Route, Switch, BrowserRouter, Link, generatePath } from 'react-router-dom';
+
 import teoria from 'teoria';
+
 import PadSelect from './ChordFinder/PadSelect';
 import NoteSelect from './ChordFinder/NoteSelect';
 import ChordTypeSelect from './ChordFinder/ChordTypeSelect';
 import Pads from './ChordFinder/Pads';
+import CollectionActions from './ChordFinder/CollectionActions';
 import Collection from './ChordFinder/Collection';
+
 import './App.css';
 
 class App extends React.Component {
@@ -35,8 +40,7 @@ class App extends React.Component {
   }
 
   addChordToCollection() {
-    let currentChord = teoria.chord(this.state.rootNote + this.state.chordType);
-    this.state.collection.push(currentChord);
+    this.state.collection.push(this.state.rootNote + this.state.chordType);
     this.setState({ collection: this.state.collection });
   }
 
@@ -45,24 +49,36 @@ class App extends React.Component {
     const numberOfPads = this.state.numberOfPads;
     const collection = this.state.collection;
     return (
-      <div className="App">
-        <div className="row">
-          <div className="col col-12">
-            <PadSelect changeNumberOfPads={this.changeNumberOfPads} />
-            <NoteSelect changeRootNote={this.changeRootNote} />
-            <ChordTypeSelect changeChordType={this.changeChordType} />
-          </div>
-        </div>
-        <Pads
-          numberOfPads={numberOfPads}
-          currentChord={currentChord}>
-        </Pads>
-        <Collection
-          addChordToCollection={this.addChordToCollection}
-          currentChord={currentChord}
-          collection={collection}>
-        </Collection>
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route path={'/collection/:chords'} exact component={Collection} />
+          <Route path={'/'} exact>
+            <div className="App">
+              <div className="row">
+                <div className="col col-12">
+                  <h2>MPC-Chord-Finder</h2>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col col-12">
+                  <PadSelect changeNumberOfPads={this.changeNumberOfPads} />
+                  <NoteSelect changeRootNote={this.changeRootNote} />
+                  <ChordTypeSelect changeChordType={this.changeChordType} />
+                </div>
+              </div>
+              <Pads
+                numberOfPads={numberOfPads}
+                currentChord={currentChord}>
+              </Pads>
+              <CollectionActions
+                addChordToCollection={this.addChordToCollection}
+                currentChord={currentChord}
+                collection={collection}>
+              </CollectionActions>
+            </div>
+          </Route>
+        </Switch>
+      </BrowserRouter>
     );
   }
 }

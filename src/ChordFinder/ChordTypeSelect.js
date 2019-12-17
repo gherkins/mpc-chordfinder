@@ -4,6 +4,7 @@ export default class ChordTypeSelect extends React.Component {
   render() {
     return (
       <select
+        value={this.props.value}
         className="form-control"
         onChange={this.props.changeChordType}>
         <option value="">maj</option>

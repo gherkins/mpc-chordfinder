@@ -66,9 +66,9 @@ class App extends React.Component {
               </div>
               <div className="row">
                 <div className="col col-12">
-                  <PadSelect changeNumberOfPads={this.changeNumberOfPads} />
-                  <NoteSelect changeRootNote={this.changeRootNote} />
-                  <ChordTypeSelect changeChordType={this.changeChordType} />
+                  <PadSelect changeNumberOfPads={this.changeNumberOfPads} value={this.state.numberOfPads} />
+                  <NoteSelect changeRootNote={this.changeRootNote} value={this.state.rootNote} />
+                  <ChordTypeSelect changeChordType={this.changeChordType} value={this.state.chordType} />
                 </div>
               </div>
               <Pads

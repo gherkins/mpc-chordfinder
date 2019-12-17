@@ -4,6 +4,7 @@ export default class NoteSelect extends React.Component {
   render() {
     return (
       <select
+        value={this.props.value}
         className="form-control"
         onChange={this.props.changeRootNote}>
         <option value="C" className="active">C</option>

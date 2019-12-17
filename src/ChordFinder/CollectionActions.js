@@ -13,10 +13,17 @@ export default class CollectionActions extends React.Component {
           <a
             role="button"
             target="_blank"
-            href={0 === this.props.collection.length ? false : '/collection/' + this.props.collection.join('-')}
+            rel="noopener noreferrer"
+            href={0 === this.props.collection.length ? undefined : '/collection/' + this.props.collection.join('-')}
             className='btn btn-white btn-block text-left'>
             Show chord-collection ({this.props.collection.length})
           </a>
+          <button
+            className="btn btn-white btn-block text-left"
+            disabled={0 === this.props.collection.length}
+            onClick={this.props.clearChordCollection}>
+            Clear chord-collection
+          </button>
         </div>
       </div>
     );

@@ -25,6 +25,7 @@ class App extends React.Component {
     this.changeRootNote = this.changeRootNote.bind(this);
     this.changeChordType = this.changeChordType.bind(this);
     this.addChordToCollection = this.addChordToCollection.bind(this);
+    this.clearChordCollection = this.clearChordCollection.bind(this);
   }
 
   changeNumberOfPads(e) {
@@ -42,6 +43,10 @@ class App extends React.Component {
   addChordToCollection() {
     this.state.collection.push(this.state.rootNote + this.state.chordType);
     this.setState({ collection: this.state.collection });
+  }
+
+  clearChordCollection() {
+    this.setState({ collection: [] });
   }
 
   render() {
@@ -70,9 +75,10 @@ class App extends React.Component {
                 numberOfPads={numberOfPads}
                 currentChord={currentChord}>
               </Pads>
+              <p></p>
               <CollectionActions
                 addChordToCollection={this.addChordToCollection}
-                currentChord={currentChord}
+                clearChordCollection={this.clearChordCollection}
                 collection={collection}>
               </CollectionActions>
             </div>

@@ -31,7 +31,7 @@ export default class Collection extends React.Component {
             </Link>
             <Clipboard
               data-clipboard-text={window.location.href}
-              className="btn btn-block text-left"
+              className="btn btn-block text-left mb-0"
               component="button">
               Copy collection-URL to clipboard
             </Clipboard>

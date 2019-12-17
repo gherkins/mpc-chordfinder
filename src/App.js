@@ -56,7 +56,7 @@ class App extends React.Component {
     return (
       <HashRouter basename='/'>
         <Switch>
-          <Route path={'/collection/:chords'} exact component={Collection} />
+          <Route path={'/collection/:pads/:chords'} exact component={Collection} />
           <Route path={'/'} exact>
             <div className="App">
               <div className="row">
@@ -79,6 +79,7 @@ class App extends React.Component {
               <CollectionActions
                 addChordToCollection={this.addChordToCollection}
                 clearChordCollection={this.clearChordCollection}
+                numberOfPads={numberOfPads}
                 collection={collection}>
               </CollectionActions>
             </div>

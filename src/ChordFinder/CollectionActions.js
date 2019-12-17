@@ -11,7 +11,7 @@ export default class CollectionActions extends React.Component {
             onClick={this.props.addChordToCollection}>
             Add chord to collection
           </button>
-          <Link to={'/collection/' + this.props.collection.join('-')}>
+          <Link to={'/collection/' + this.props.numberOfPads + '/' + this.props.collection.join('-')}>
             <button
               className='btn btn-block text-left'
               disabled={0 === this.props.collection.length}>

@@ -11,7 +11,9 @@ export default class Collection extends React.Component {
   render() {
     let chords = [];
     try {
-      let chordsNames = window.location.href.split('/').pop().split('-');
+      let urlParts = window.location.href.split('/');
+      let chordsNames = urlParts.pop().split('-');
+      var numberOfPads = parseInt(urlParts.pop());
       chordsNames.forEach(function (chordName) {
         let chord = teoria.chord(chordName);
         chords.push(chord);
@@ -21,7 +23,7 @@ export default class Collection extends React.Component {
     }
     return (
       <div className="collection">
-        <div className="row">
+        <div className="row actions">
           <div className="col col-12">
             <h2>MPC-Chords</h2>
             <Link to={'/'}>
@@ -33,6 +35,7 @@ export default class Collection extends React.Component {
               type="text"
               className="form-control"
               onClick={this.handleFocus}
+              readOnly={true}
               value={window.location.href} />
           </div>
         </div>
@@ -43,7 +46,11 @@ export default class Collection extends React.Component {
                 <h3>{chord.name}</h3>
               </div>
             </div>
-            <Pads key={index} currentChord={chord}></Pads>
+            <Pads
+              key={index}
+              currentChord={chord}
+              numberOfPads={numberOfPads}
+            ></Pads>
           </div>,
         )}
       </div>

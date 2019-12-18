@@ -4,6 +4,7 @@ export default class PadSelect extends React.Component {
   render() {
     return (
       <select
+        aria-label="Select 12 or 16 pads"
         value={this.props.value}
         className="form-control"
         onChange={this.props.changeNumberOfPads}>

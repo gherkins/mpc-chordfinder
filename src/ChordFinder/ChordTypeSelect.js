@@ -4,6 +4,7 @@ export default class ChordTypeSelect extends React.Component {
   render() {
     return (
       <select
+        aria-label="Select a chord type"
         value={this.props.value}
         className="form-control"
         onChange={this.props.changeChordType}>

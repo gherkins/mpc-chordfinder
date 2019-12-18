@@ -4,6 +4,7 @@ export default class NoteSelect extends React.Component {
   render() {
     return (
       <select
+        aria-label="Select a root note"
         value={this.props.value}
         className="form-control"
         onChange={this.props.changeRootNote}>

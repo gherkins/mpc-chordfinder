@@ -21,6 +21,34 @@ a:hover {
     background: #fff;
     text-decoration: none;
     margin-bottom: 10px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: all ease-in-out .5s;
+}
+
+.btn-block::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    height: 100%;
+    width: 50%;
+    background-color: #000;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all ease-in-out 1s;
+    transform: scale(5, 5);
+}
+
+.btn-block:active::after {
+    padding: 0;
+    margin: 0;
+    opacity: .2;
+    transition: 0s;
+    transform: scale(0, 0);
 }
 
 .btn.back {

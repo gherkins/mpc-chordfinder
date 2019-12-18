@@ -8,7 +8,7 @@
       "type": "image/x-icon"
     }
   ],
-  "start_url": "/mpc-chordfinder",
+  "start_url": "https://web-development.cc/mpc-chordfinder/#/",
   "display": "standalone",
   "theme_color": "#FFFFFF",
   "background_color": "#2144fb"

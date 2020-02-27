@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "03380fd3801f33b1df80dfc22e7a49c9",
+    "revision": "ccf7d73b48ffeb2c87fb14b007dfca9e",
     "url": "/mpc-chordfinder/index.html"
   },
   {

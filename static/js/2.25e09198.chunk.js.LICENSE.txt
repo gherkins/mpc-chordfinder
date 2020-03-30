@@ -4,29 +4,28 @@ object-assign
 @license MIT
 */
 
-/*!******************!*\
-        !*** ./index.js ***!
-        \******************/
+/*!
+ * clipboard.js v2.0.4
+ * https://zenorocha.github.io/clipboard.js
+ * 
+ * Licensed MIT © Zeno Rocha
+ */
+
+/*! clipboard */
 
 /*! exports provided: default */
+
+/*! no static exports found */
+
+/*! prop-types */
 
 /*! react */
 
 /*! react-dom */
 
-/*! prop-types */
-
-/*! clipboard */
-
-/*!********************************************************************************************************!*\
-        !*** external {"root":"ClipboardJS","amd":"clipboard","commonjs":"clipboard","commonjs2":"clipboard"} ***!
-        \********************************************************************************************************/
-
-/*! no static exports found */
-
-/*!*********************************************************************************************************!*\
-        !*** external {"root":"PropTypes","amd":"prop-types","commonjs":"prop-types","commonjs2":"prop-types"} ***!
-        \*********************************************************************************************************/
+/*!******************!*\
+        !*** ./index.js ***!
+        \******************/
 
 /*!**************************************************************************************!*\
         !*** external {"root":"React","amd":"react","commonjs":"react","commonjs2":"react"} ***!
@@ -36,25 +35,15 @@ object-assign
         !*** external {"root":"ReactDOM","amd":"react-dom","commonjs":"react-dom","commonjs2":"react-dom"} ***!
         \*****************************************************************************************************/
 
-/** @license React v16.12.0
- * react.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
+/*!********************************************************************************************************!*\
+        !*** external {"root":"ClipboardJS","amd":"clipboard","commonjs":"clipboard","commonjs2":"clipboard"} ***!
+        \********************************************************************************************************/
 
-/** @license React v16.12.0
- * react-dom.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
+/*!*********************************************************************************************************!*\
+        !*** external {"root":"PropTypes","amd":"prop-types","commonjs":"prop-types","commonjs2":"prop-types"} ***!
+        \*********************************************************************************************************/
 
-/** @license React v0.18.0
+/** @license React v0.19.1
  * scheduler.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -72,9 +61,20 @@ object-assign
  * LICENSE file in the root directory of this source tree.
  */
 
-/*!
- * clipboard.js v2.0.4
- * https://zenorocha.github.io/clipboard.js
- * 
- * Licensed MIT © Zeno Rocha
+/** @license React v16.13.1
+ * react-dom.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v16.13.1
+ * react.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  */

@@ -55,6 +55,10 @@ a:hover {
     margin-top: 10px;
 }
 
+.btn-block{
+    margin-top: 0 !important;
+}
+
 .container {
     max-width: 400px;
 }

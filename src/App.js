@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route, Switch, HashRouter } from 'react-router-dom';
 
-import teoria from 'teoria';
+import teoria, { Scale } from 'teoria';
+import teoriaChordProgression from 'teoria-chord-progression';
 
 import PadSelect from './ChordFinder/PadSelect';
 import NoteSelect from './ChordFinder/NoteSelect';
@@ -26,6 +27,7 @@ class App extends React.Component {
     this.changeChordType = this.changeChordType.bind(this);
     this.addChordToCollection = this.addChordToCollection.bind(this);
     this.clearChordCollection = this.clearChordCollection.bind(this);
+    this.generateRandomChordCollection = this.generateRandomChordCollection.bind(this);
   }
 
   changeNumberOfPads(e) {
@@ -47,6 +49,25 @@ class App extends React.Component {
 
   clearChordCollection() {
     this.setState({ collection: [] });
+  }
+
+  generateRandomChordCollection() {
+    try {
+      const scales = Scale.KNOWN_SCALES;
+      const scaleName = scales[Math.floor(Math.random() * scales.length)];
+      const notes = teoria.scale('c', 'chromatic').notes();
+      const note = notes[Math.floor(Math.random() * notes.length)];
+      const scale = teoria.scale(note.name(), scaleName);
+      const chordProgression = teoriaChordProgression(scale, [2, 5, 1]);
+      let collection = [];
+      chordProgression.getChords().forEach((chord) => {
+        collection.push(chord.name);
+      });
+      this.setState({ collection });
+    } catch (e) {
+      //just keep on trying
+      this.generateRandomChordCollection();
+    }
   }
 
   render() {
@@ -79,6 +100,7 @@ class App extends React.Component {
               <CollectionActions
                 addChordToCollection={this.addChordToCollection}
                 clearChordCollection={this.clearChordCollection}
+                generateRandomChordCollection={this.generateRandomChordCollection}
                 numberOfPads={numberOfPads}
                 collection={collection}>
               </CollectionActions>

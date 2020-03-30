@@ -24,6 +24,11 @@ export default class CollectionActions extends React.Component {
             onClick={this.props.clearChordCollection}>
             Clear chord-collection
           </button>
+          <button
+            className="btn btn-block text-left"
+            onClick={this.props.generateRandomChordCollection}>
+            Generate random collection
+          </button>
         </div>
       </div>
     );

@@ -58,7 +58,7 @@ class App extends React.Component {
       const notes = teoria.scale('c', 'chromatic').notes();
       const note = notes[Math.floor(Math.random() * notes.length)];
       const scale = teoria.scale(note.name(), scaleName);
-      const chordProgression = teoriaChordProgression(scale, [2, 5, 1]);
+      const chordProgression = teoriaChordProgression(scale, [2, 5, 1], 4);
       let collection = [];
       chordProgression.getChords().forEach((chord) => {
         collection.push(chord.name);

@@ -78,7 +78,7 @@ class App extends React.Component {
       <HashRouter basename='/'>
         <Switch>
           <Route path={'/collection/:pads/:chords'} exact component={Collection} />
-          <Route path={'/'} exact>
+          <Route path={'/'}>
             <div className="App">
               <div className="row">
                 <div className="col col-12">

@@ -103,30 +103,36 @@ class App extends React.Component {
           <Route path={'/collection/:pads/:chords'} exact component={Collection} />
           <Route path={'/'} exact>
             <div className="App">
-              <div className="row">
-                <div className="col col-12">
-                  <h2>MPC-Chord-Finder</h2>
+              <div className="container">
+                <div className="row">
+                  <div className="col col-12">
+                    <h2>MPC-Chord-Finder</h2>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col col-12">
+                    <PadSelect changeNumberOfPads={this.changeNumberOfPads} value={this.state.numberOfPads} />
+                    <NoteSelect changeRootNote={this.changeRootNote} value={this.state.rootNote} />
+                    <ChordTypeSelect changeChordType={this.changeChordType} value={this.state.chordType} />
+                  </div>
                 </div>
               </div>
-              <div className="row">
-                <div className="col col-12">
-                  <PadSelect changeNumberOfPads={this.changeNumberOfPads} value={this.state.numberOfPads} />
-                  <NoteSelect changeRootNote={this.changeRootNote} value={this.state.rootNote} />
-                  <ChordTypeSelect changeChordType={this.changeChordType} value={this.state.chordType} />
-                </div>
+              <div className="container pads">
+                <Pads
+                  numberOfPads={numberOfPads}
+                  currentChord={currentChord}>
+                </Pads>
               </div>
-              <Pads
-                numberOfPads={numberOfPads}
-                currentChord={currentChord}>
-              </Pads>
-              <p></p>
-              <CollectionActions
-                addChordToCollection={this.addChordToCollection}
-                clearChordCollection={this.clearChordCollection}
-                generateRandomChordCollection={this.generateRandomChordCollection}
-                numberOfPads={numberOfPads}
-                collection={collection}>
-              </CollectionActions>
+              <div className="container">
+                <p></p>
+                <CollectionActions
+                  addChordToCollection={this.addChordToCollection}
+                  clearChordCollection={this.clearChordCollection}
+                  generateRandomChordCollection={this.generateRandomChordCollection}
+                  numberOfPads={numberOfPads}
+                  collection={collection}>
+                </CollectionActions>
+              </div>
             </div>
           </Route>
           <Route path="*">

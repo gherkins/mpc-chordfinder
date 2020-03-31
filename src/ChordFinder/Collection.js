@@ -2,12 +2,31 @@ import React from 'react';
 import { Redirect, Link } from 'react-router-dom';
 import teoria from 'teoria';
 import Clipboard from 'react-clipboard.js';
+import html2canvas from 'html2canvas';
 
 import Pads from './Pads';
 
 export default class Collection extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0);
+  }
+
+  exportAsJPG() {
+    const chordCollection = document.querySelector('.container.collection');
+    html2canvas(chordCollection, {
+      useCORS: true,
+      allowTaint: true,
+      backgroundColor: '#3862fd',
+    })
+      .then(canvas => {
+        const imgData = canvas.toDataURL('image/jpeg');
+        const link = document.createElement('a');
+        link.download = 'mpc-chord-collection';
+        link.href = imgData;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
   }
 
   render() {
@@ -24,42 +43,49 @@ export default class Collection extends React.Component {
       return <Redirect to={'/'} />;
     }
     return (
-      <div className="collection">
-        <div className="row">
-          <div className="col col-12">
-            <h2>MPC-Chords ({chords.length})</h2>
-          </div>
-        </div>
-        <div className="row actions">
-          <div className="col col-12">
-            <Link to={'/'}>
-              <button className="btn btn-block text-left back">
-                Back to the Chord-Finder-App
-              </button>
-            </Link>
-            <Clipboard
-              data-clipboard-text={window.location.href}
-              className="btn btn-block text-left mb-0"
-              component="button">
-              Copy collection-URL to clipboard
-            </Clipboard>
-          </div>
-        </div>
-        {Array.from(chords, (chord, index) =>
-          <div key={index}>
-            <div className="row">
-              <div className="col col-12">
-                <h3>{chord.name}</h3>
-              </div>
+      <React.Fragment>
+        <div className="container">
+          <div className="row">
+            <div className="col col-12">
+              <h2>MPC-Chords ({chords.length})</h2>
             </div>
-            <Pads
-              key={index}
-              currentChord={chord}
-              numberOfPads={numberOfPads}
-            ></Pads>
-          </div>,
-        )}
-      </div>
+          </div>
+          <div className="row actions">
+            <div className="col col-12">
+              <Link to={'/'}>
+                <button className="btn btn-block text-left back">
+                  Back to the Chord-Finder-App
+                </button>
+              </Link>
+              <Clipboard
+                data-clipboard-text={window.location.href}
+                className="btn btn-block text-left"
+                component="button">
+                Copy collection-URL to clipboard
+              </Clipboard>
+              <button className="btn btn-block text-left mb-0" onClick={this.exportAsJPG}>
+                Export collection as JPG-Image
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="container collection">
+          {Array.from(chords, (chord, index) =>
+            <div className={'chord'} key={index}>
+              <div className="row">
+                <div className="col col-12">
+                  <h3>{chord.name}</h3>
+                </div>
+              </div>
+              <Pads
+                key={index}
+                currentChord={chord}
+                numberOfPads={numberOfPads}
+              ></Pads>
+            </div>,
+          )}
+        </div>
+      </React.Fragment>
     );
   }
 }

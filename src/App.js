@@ -31,23 +31,42 @@ class App extends React.Component {
   }
 
   changeNumberOfPads(e) {
+    window.gtag('event', 'select-changed', {
+      'event_category': 'changeNumberOfPads',
+      'event_label': e.target.value,
+    });
     this.setState({ numberOfPads: parseInt(e.target.value) });
   }
 
   changeRootNote(e) {
+    window.gtag('event', 'select-changed', {
+      'event_category': 'changeRootNote',
+      'event_label': e.target.value,
+    });
     this.setState({ rootNote: e.target.value });
   }
 
   changeChordType(e) {
+    window.gtag('event', 'select-changed', {
+      'event_category': 'changeChordType',
+      'event_label': e.target.value,
+    });
     this.setState({ chordType: e.target.value });
   }
 
   addChordToCollection() {
+    window.gtag('event', 'button-clicked', {
+      'event_category': 'addChordToCollection',
+      'event_label': this.state.rootNote + this.state.chordType,
+    });
     this.state.collection.push(this.state.rootNote + this.state.chordType);
     this.setState({ collection: this.state.collection });
   }
 
   clearChordCollection() {
+    window.gtag('event', 'button-clicked', {
+      'event_category': 'clearChordCollection',
+    });
     this.setState({ collection: [] });
   }
 
@@ -62,6 +81,10 @@ class App extends React.Component {
       let collection = [];
       chordProgression.getChords().forEach((chord) => {
         collection.push(chord.name);
+      });
+      window.gtag('event', 'button-clicked', {
+        'event_category': 'generateRandomChordCollection',
+        'event_label': collection.join('-'),
       });
       this.setState({ collection });
     } catch (e) {

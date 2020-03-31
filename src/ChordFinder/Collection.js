@@ -25,9 +25,13 @@ export default class Collection extends React.Component {
     }
     return (
       <div className="collection">
+        <div className="row">
+          <div className="col col-12">
+            <h2>MPC-Chords ({chords.length})</h2>
+          </div>
+        </div>
         <div className="row actions">
           <div className="col col-12">
-            <h2>MPC-Chords</h2>
             <Link to={'/'}>
               <button className="btn btn-block text-left back">
                 Back to the Chord-Finder-App

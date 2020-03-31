@@ -12,6 +12,11 @@ export default class Collection extends React.Component {
   }
 
   exportAsJPG() {
+    const pads = document.querySelectorAll('.pad');
+    const shadowValue = pads[0].style.boxShadow;
+    document.querySelectorAll('.pad').forEach((pad) => {
+      pad.style.boxShadow = 'none';
+    });
     const chordCollection = document.querySelector('.container.collection');
     html2canvas(chordCollection, {
       useCORS: true,
@@ -19,13 +24,16 @@ export default class Collection extends React.Component {
       backgroundColor: '#3862fd',
     })
       .then(canvas => {
-        const imgData = canvas.toDataURL('image/jpeg');
+        const imgData = canvas.toDataURL('image/jpeg', 0.5);
         const link = document.createElement('a');
         link.download = 'mpc-chord-collection';
         link.href = imgData;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+        document.querySelectorAll('.pad').forEach((pad) => {
+          pad.style.boxShadow = shadowValue;
+        });
       });
   }
 
@@ -81,7 +89,7 @@ export default class Collection extends React.Component {
                 key={index}
                 currentChord={chord}
                 numberOfPads={numberOfPads}
-              ></Pads>
+              />
             </div>,
           )}
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, HashRouter } from 'react-router-dom';
+import { Route, Switch, HashRouter, Redirect } from 'react-router-dom';
 
 import teoria, { Scale } from 'teoria';
 import teoriaChordProgression from 'teoria-chord-progression';
@@ -105,6 +105,9 @@ class App extends React.Component {
                 collection={collection}>
               </CollectionActions>
             </div>
+          </Route>
+          <Route path="*">
+            <Redirect to={'/'} />
           </Route>
         </Switch>
       </HashRouter>

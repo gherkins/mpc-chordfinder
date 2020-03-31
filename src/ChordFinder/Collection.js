@@ -11,7 +11,18 @@ export default class Collection extends React.Component {
     window.scrollTo(0, 0);
   }
 
+  trackClipboardCopy() {
+    window.gtag('event', 'button-clicked', {
+      'event_category': 'copyCollectionToClipboard',
+      'event_label': window.location.hash,
+    });
+  }
+
   exportAsJPG() {
+    window.gtag('event', 'button-clicked', {
+      'event_category': 'exportAsJPG',
+      'event_label': window.location.hash,
+    });
     const pads = document.querySelectorAll('.pad');
     const shadowValue = pads[0].style.boxShadow;
     document.querySelectorAll('.pad').forEach((pad) => {
@@ -68,6 +79,7 @@ export default class Collection extends React.Component {
               <Clipboard
                 data-clipboard-text={window.location.href}
                 className="btn btn-block text-left"
+                onClick={this.trackClipboardCopy}
                 component="button">
                 Copy collection-URL to clipboard
               </Clipboard>

@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "83250c6e0a034821abc772275bc0ce96",
+    "revision": "b34d805768986ef08ea0794e3dc9c0ea",
     "url": "/mpc-chordfinder/index.html"
   },
   {
-    "revision": "3ca55b58b6d384ac29dc",
+    "revision": "07d87a9174550a41cf51",
     "url": "/mpc-chordfinder/static/css/main.698b63fc.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mpc-chordfinder/static/js/2.25e09198.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3ca55b58b6d384ac29dc",
-    "url": "/mpc-chordfinder/static/js/main.1b70caa8.chunk.js"
+    "revision": "07d87a9174550a41cf51",
+    "url": "/mpc-chordfinder/static/js/main.7aa83da9.chunk.js"
   },
   {
     "revision": "9fb614c32be8ab4bdf33",

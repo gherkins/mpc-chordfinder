@@ -6,6 +6,10 @@ import Clipboard from 'react-clipboard.js';
 import Pads from './Pads';
 
 export default class Collection extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     let chords = [];
     try {

@@ -6,9 +6,13 @@ import html2canvas from 'html2canvas';
 
 import Pads from './Pads';
 
-export default class Collection extends React.Component {
+class Collection extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0);
+    window.gtag('event', 'view', {
+      'event_category': 'showCollection',
+      'event_label': window.location.hash,
+    });
   }
 
   trackClipboardCopy() {
@@ -109,3 +113,5 @@ export default class Collection extends React.Component {
     );
   }
 }
+
+export default Collection;

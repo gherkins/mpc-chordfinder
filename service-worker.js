@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/mpc-chordfinder/precache-manifest.8e5ce09dd09c9849ab5c022202c73b98.js"
+  "/mpc-chordfinder/precache-manifest.115473c7b87085436ac465935acee799.js"
 );
 
 self.addEventListener('message', (event) => {

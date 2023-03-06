@@ -38,8 +38,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "gh-pages": "^2.2.0"
-  },
   "homepage": "https://gherkins.github.io/mpc-chordfinder"
 }

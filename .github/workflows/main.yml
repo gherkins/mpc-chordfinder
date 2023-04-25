@@ -5,12 +5,13 @@ permissions:
 jobs:
     build-and-deploy:
         concurrency: ci-${{ github.ref }}
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-22.04
         steps:
-            - name: Checkout 🛎️
+            - name: Checkout
               uses: actions/checkout@v3
 
-            - uses: actions/setup-node@v3
+            - name: Setup Node
+              uses: actions/setup-node@v3
 
             - name: Install modules
               run: "yarn install"
@@ -18,7 +19,7 @@ jobs:
             - name: Build
               run: "yarn build"
 
-            - name: Deploy 🚀
+            - name: Deploy
               uses: JamesIves/github-pages-deploy-action@v4
               with:
                   folder: build

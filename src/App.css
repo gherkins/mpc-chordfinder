@@ -129,3 +129,16 @@ select:first-child {
 .collection .pads {
     margin-bottom: 15px;
 }
+
+.app-store a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.app-store a:hover span {
+    text-decoration: underline;
+}

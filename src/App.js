@@ -13,6 +13,8 @@ import Collection from './ChordFinder/Collection';
 
 import './App.css';
 
+const APP_STORE_URL = 'https://apps.apple.com/app/mpc-chord-finder/id6833527120';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -107,6 +109,14 @@ class App extends React.Component {
                 <div className="row">
                   <div className="col col-12">
                     <h2>MPC-Chord-Finder</h2>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col col-12 app-store">
+                    <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+                      <span>Check out the free iOS App</span>
+                      <img src={process.env.PUBLIC_URL + '/app-store-badge.svg'} alt="Download on the App Store" height="40" />
+                    </a>
                   </div>
                 </div>
                 <div className="row">
